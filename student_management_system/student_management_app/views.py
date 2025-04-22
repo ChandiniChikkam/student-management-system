@@ -2,6 +2,7 @@ import datetime
 import json
 import os
 
+
 import requests
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
@@ -9,6 +10,7 @@ from django.core.files.storage import FileSystemStorage
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
 from django.urls import reverse
+
 
 from student_management_app.EmailBackEnd import EmailBackEnd
 from student_management_app.models import CustomUser, Courses, SessionYearModel
