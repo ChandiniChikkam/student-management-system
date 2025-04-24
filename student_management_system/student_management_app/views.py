@@ -14,7 +14,6 @@ from student_management_app.EmailBackEnd import EmailBackEnd
 from student_management_app.models import CustomUser, Courses, SessionYearModel
 from student_management_system import settings
 
-
 def showDemoPage(request):
     return render(request,"demo.html")
 
