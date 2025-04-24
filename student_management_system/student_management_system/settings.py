@@ -150,7 +150,6 @@ EMAIL_FILE_PATH=os.path.join(BASE_DIR,"sent_mails")
 # EMAIL_USE_TLS=True
 # DEFAULT_FROM_EMAIL="Student management System <GMAIl_EMAIL>"
 #
-
 #Enable Only Making Project Live on Heroku
 # STATICFILES_STORAGE='whitenoise.storage.CompressedManifestStaticFilesStorage'
 # import dj_database_url
