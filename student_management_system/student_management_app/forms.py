@@ -3,7 +3,6 @@ from django.forms import ChoiceField
 
 from student_management_app.models import Courses, SessionYearModel, Subjects, Students
 
-
 class ChoiceNoValidation(ChoiceField):
     def validate(self, value):
         pass
