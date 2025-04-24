@@ -13,7 +13,6 @@ from django.views.decorators.csrf import csrf_exempt
 from student_management_app.models import Subjects, SessionYearModel, Students, Attendance, AttendanceReport, \
     LeaveReportStaff, Staffs, FeedBackStaffs, CustomUser, Courses, NotificationStaffs, StudentResult, OnlineClassRoom
 
-
 def staff_home(request):
     #For Fetch All Student Under Staff
     subjects=Subjects.objects.filter(staff_id=request.user.id)
