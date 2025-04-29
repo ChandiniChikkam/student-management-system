@@ -1,3 +1,4 @@
+
 import json
 from datetime import datetime
 from uuid import uuid4
@@ -108,6 +109,7 @@ def staff_update_attendance(request):
     session_year_id=SessionYearModel.object.all()
     return render(request,"staff_template/staff_update_attendance.html",{"subjects":subjects,"session_year_id":session_year_id})
 
+
 @csrf_exempt
 def get_attendance_dates(request):
     subject=request.POST.get("subject")
@@ -134,6 +136,7 @@ def get_attendance_student(request):
         data_small={"id":student.student_id.admin.id,"name":student.student_id.admin.first_name+" "+student.student_id.admin.last_name,"status":student.status}
         list_data.append(data_small)
     return JsonResponse(json.dumps(list_data),content_type="application/json",safe=False)
+
 
 @csrf_exempt
 def save_updateattendance_data(request):
