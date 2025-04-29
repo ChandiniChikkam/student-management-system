@@ -7,6 +7,7 @@ class ChoiceNoValidation(ChoiceField):
     def validate(self, value):
         pass
 
+
 class DateInput(forms.DateInput):
     input_type = "date"
 
@@ -46,6 +47,7 @@ class AddStudentForm(forms.Form):
     sex=forms.ChoiceField(label="Sex",choices=gender_choice,widget=forms.Select(attrs={"class":"form-control"}))
     session_year_id=forms.ChoiceField(label="Session Year",choices=session_list,widget=forms.Select(attrs={"class":"form-control"}))
     profile_pic=forms.FileField(label="Profile Pic",max_length=50,widget=forms.FileInput(attrs={"class":"form-control"}))
+
 
 class EditStudentForm(forms.Form):
     email=forms.EmailField(label="Email",max_length=50,widget=forms.EmailInput(attrs={"class":"form-control"}))
@@ -108,6 +110,7 @@ class EditResultForm(forms.Form):
     except:
         session_list=[]
 
+    
     subject_id=forms.ChoiceField(label="Subject",widget=forms.Select(attrs={"class":"form-control"}))
     session_ids=forms.ChoiceField(label="Session Year",choices=session_list,widget=forms.Select(attrs={"class":"form-control"}))
     student_ids=ChoiceNoValidation(label="Student",widget=forms.Select(attrs={"class":"form-control"}))
