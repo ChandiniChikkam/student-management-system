@@ -35,7 +35,6 @@ def doLogin(request):
             messages.error(request,"Invalid Captcha Try Again")
             return HttpResponseRedirect("/")
 
-       
         user=EmailBackEnd.authenticate(request,username=request.POST.get("email"),password=request.POST.get("password"))
         if user!=None:
             login(request,user)
