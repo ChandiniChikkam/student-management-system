@@ -8,7 +8,6 @@ class ChoiceNoValidation(ChoiceField):
     def validate(self, value):
         pass
 
-
 class DateInput(forms.DateInput):
     input_type = "date"
 
