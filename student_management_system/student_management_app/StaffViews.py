@@ -2,6 +2,7 @@ import json
 from datetime import datetime
 from uuid import uuid4
 
+
 from django.contrib import messages
 from django.core import serializers
 from django.forms import model_to_dict
@@ -13,7 +14,6 @@ from django.views.decorators.csrf import csrf_exempt
 
 from student_management_app.models import Subjects, SessionYearModel, Students, Attendance, AttendanceReport, \
     LeaveReportStaff, Staffs, FeedBackStaffs, CustomUser, Courses, NotificationStaffs, StudentResult, OnlineClassRoom
-
 
 def staff_home(request):
     #For Fetch All Student Under Staff
