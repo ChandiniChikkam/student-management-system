@@ -6,8 +6,10 @@ from django.shortcuts import render
 from django.urls import reverse
 from django.views.decorators.csrf import csrf_exempt
 
+
 from student_management_app.models import Students, Courses, Subjects, CustomUser, Attendance, AttendanceReport, \
     LeaveReportStudent, FeedBackStudent, NotificationStudent, StudentResult, OnlineClassRoom, SessionYearModel
+
 
 def student_home(request):
     student_obj=Students.objects.get(admin=request.user.id)
